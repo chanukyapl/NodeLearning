@@ -1,0 +1,10 @@
+var express= require('express');
+var app=express();
+app.use(express.static('public'));
+app.get('/',function callba(request,response) {
+    response.sendFile(__dirname+'/index.html');
+
+})
+app.listen(8080,()=>{
+    console.log("listening on %s,%s",app.path,app.routes);
+})

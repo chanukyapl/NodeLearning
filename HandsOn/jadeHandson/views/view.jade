@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title "Jade Template Engine"
+  body
+    h1 "Conditions and Loops in Jade"
+    ol -var option=#{option}
+      if (option === "students")
+        each name in Teachers
+          li #{teacher}
+      else if (option === "teachers" )
+        each name in Students
+          li #{teacher}
+      else
+          p "You have entered wrong option!"
+
+
+
+
+       // define the page title as "Jade Template Engine"
+       
+       // render the heading "Conditions and Loops in Jade" in h1 tag
+       // display the list of teachers or students based on the option value passed from app.js in an ol tag
+       // if the option passed is neither 'students' nor 'teachers', 
+          display the response 'You have entered wrong option!' in p tag
